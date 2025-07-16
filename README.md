@@ -48,8 +48,10 @@
                 git push -u <remote-alias> <local-branch>
             ```
             -  u flag set upstream 
-            - Push my local branch named <branch> to the remote repo called <remote>, and update the **remote branch with the same name**.
+            - Push my local branch named **branch** to the remote repo called <remote>, and update the **remote branch with the same name**.
             - After this git push and git pull will be valid ...
+            - if no -u is used then again do 
+            - git push remote-alias local-branch
         - #### Explict Way
             ```
                 git push <remote-name> <local-branch>:<remote-branch>
@@ -67,7 +69,10 @@
 
 ### Branch 
 - Check for the All the branches (Current Branch) 
- - git branch (* -> represent current branch)
+- git branch (* -> represent current branch)
+- git branch -v
+    - O/p - > 
+    branch_name Latest_Commit_hash Latest_Commit_Message
 - Rename 
     - If you're on the branch:
         ```
