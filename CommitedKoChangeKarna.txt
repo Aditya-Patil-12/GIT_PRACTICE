@@ -7,3 +7,5 @@ check commits git reflog
 
 // restore the deleted commits ko ...
 git reset --hard <commit-hash> 		
+
+// editing just for Practice
