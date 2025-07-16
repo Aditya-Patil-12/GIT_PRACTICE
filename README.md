@@ -87,13 +87,54 @@
         git branch -m old-branch-name new-branch-name
         ```
 
-### Fetch
+### Fetch 
+- Downloads all new commits, branches, and tags from the remote
+- but it will never add it in our Local Repo 
 - 1) Fetch changes from a remote
     ```
-    git fetch origin
+        git fetch origin
     ```
     - Updates your local view of the remote but doesn't merge.
+- 2) Merge the changes from remote repo
+    ```
+        git merge <remote-url>/<branch-main>
+    ```
+
+### Pull
+-   Fetch + Merge  ()
+-   ```
+        git fetch <remote-url> <branch-name>
+    ```
+-  options rebase( Scenario : Two developers one pushed the changes to remote repo
+other is behind the remote and has not pushed his commits to remote so now need to fetch them and add his commits on top of new commits  )
+    ```
+        git pull --rebase
+    ```
+    - same as
+-   ```
+        git fetch
+        git rebase <remote-alias>/<branch>
+    ```
 ### Clone
+- Clone own or public repo
+    ```
+        git clone <url>
+    ```
+- Scenario 1: Cloning Your Own Repo
+    - Full commit history is cloned
+    - origin is set to your remote repo & Local main tracks origin/main
+    - You can push directly if you have write access
+-  Scenario 2: Cloning Someone Else’s Repo (e.g., a public project)
+    - Full commit history is cloned
+    - origin is set to your remote repo & Local main tracks origin/main
+    - You cannot push directly as you don't have write access
+- Public Repo Contribution 
+    - For Scenario 2 we other way  
+    - To contribute:
+    - Fork the repo on GitHub
+    - Add your fork as origin
+    - Add original repo as upstream:
+    - git remote add upstream 
 
 ### Status
 - 1) Checking whethere the changes are Stagged or not OR If the local repo and remote repo are ahead or behind of their commits
