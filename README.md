@@ -16,10 +16,11 @@
     ```
 
 ### Remote(github, origin) and Local (device, main)
-- 1) checking remote
+- 1) Checking all the Remotes(alias) for git repo.
         ```
-        git remote -v
+            git remote 
         ```
+        - with -v we get all the url for alias also 
 - 2) Adding the remote  
         ``` 
         git remote add <alias> <remote-repo-url>
@@ -68,12 +69,15 @@
         - local-branch ->optional or else current branch is considered ...
 
 ### Branch 
-- Check for the All the branches (Current Branch) 
-- git branch (* -> represent current branch)
-- git branch -v
-    - O/p - > 
-    branch_name Latest_Commit_hash Latest_Commit_Message
-- Rename 
+- 1) Check for the All the branches (* -> Represent Current Branch in o/p) 
+    ```
+        git branch 
+    ```
+    - options -v
+        - o/p -> local_branch_name Latest_Commit_hash Latest_Commit_Message
+    - options -vv
+        - o/p -> local_branch_name Latest_Commit_hash[alias/remote_branch] Latest_Commit_Message
+- 2) Rename Branch 
     - If you're on the branch:
         ```
         git branch -m new-branch-name
@@ -82,13 +86,6 @@
         ```
         git branch -m old-branch-name new-branch-name
         ```
--   Current Tracking Info
-    ```
-        git branch -vv
-    ```
-    - Which local branch you're on
-    - What remote it's tracking
-    - Whether it's ahead/behind
 
 ### Fetch
 - 1) Fetch changes from a remote
@@ -97,3 +94,9 @@
     ```
     - Updates your local view of the remote but doesn't merge.
 ### Clone
+
+### Status
+- 1) Checking whethere the changes are Stagged or not OR If the local repo and remote repo are ahead or behind of their commits
+    ```
+        git status
+    ```
