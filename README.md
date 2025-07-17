@@ -1,3 +1,24 @@
+### Git config 
+- 1) Check all the configurations of the git repo 
+        ```
+            git config --list
+        ```
+- 2) Setting and Getting Git Username 
+        ```
+            git config --global user.name 'you-github-name' // set
+            git config --local user.name 'you-github-name' // set,need to do for every project
+            git config user.name // get
+        ```
+- 3) Setting and Getting Email 
+        ```
+            git config --global user.email 'you-github-emai' // set
+            git config --local user.email 'you-github-emai' // set , need to do for every project
+            git config user.email // get
+        ```
+- 4) Password Save
+        ```
+            git config --global credential.helper store
+        ```
 ### Create git repo
 - Intializing Git Repo
     ```
@@ -77,7 +98,20 @@
         - o/p -> local_branch_name Latest_Commit_hash Latest_Commit_Message
     - options -vv
         - o/p -> local_branch_name Latest_Commit_hash[alias/remote_branch] Latest_Commit_Message
-- 2) Rename Branch 
+- 2) Create a branch
+    - Only creates
+    ```
+        git branch <new_branch_name>
+    ```
+    - Creates and move (checkout is use to move) 
+    ```
+        git checkout -b  <new_branch_name>
+    ```
+- 3) Move to other branch 
+    ```
+        git checkout <branch_name_to_move>
+    ```
+- 4) Rename Branch 
     - If you're on the branch:
         ```
         git branch -m new-branch-name
@@ -86,6 +120,10 @@
         ```
         git branch -m old-branch-name new-branch-name
         ```
+- 5) Delete Branch 
+    ```
+        git branch -d <branch_name_to_be_deleted>
+    ```
 
 ### Fetch 
 - Downloads all new commits, branches, and tags from the remote
