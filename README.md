@@ -124,7 +124,21 @@
     ```
         git branch -d <branch_name_to_be_deleted>
     ```
-
+- 6) Checking difference between Branch 
+    - difference between current branch and comparing branch
+    ```
+        git diff <comparing_branch>
+    ```
+    - difference between branch1 and branch2 (to go from branch1 -> branch2)
+    ```
+        git diff branch1 branch2
+    ```
+- 7) Merging Branch
+    - current branch with other branch 
+    ```
+        git merge <other-branch>
+    ```
+    - If some merge conflict comes resolve it manully by selecting the line out of the confilct area to be kept
 ### Fetch 
 - Downloads all new commits, branches, and tags from the remote
 - but it will never add it in our Local Repo 
