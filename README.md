@@ -101,7 +101,7 @@
     ```
 
 ### Pull
--   Fetch + Merge  ()
+-   Fetch + Merge  
 -   ```
         git fetch <remote-url> <branch-name>
     ```
