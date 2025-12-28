@@ -75,6 +75,27 @@
       git push -u <alias> branch_name // -u set the upstream for the branch
   ```
 
+### Checkout
+
+- Two Types ( Switching branches & restoring a different version )
+- Type1
+  ```
+      - git checkout <branch-name>    // branch should exist
+      - git checkout -b <branch-name> // create if it does not exist
+      // --track set's the upstream
+      - git checkout <branch-name> --track <alias>/<remote-branch-to-track>   // branch should exist
+      - git checkout -b <branch-name> --track <alias>/<remote-branch-to-track> // create if it does not exist
+  ```
+- Type 2
+  - updates working tree and then index (thus only working tree is impossible)
+  ```
+      - git checkout <commit-hash> // restore the complete repo to the required commit hash
+      - git checkout tree-ish -- path_to_files that need to be restored
+      - git checkout -- file.txt  // **unstaged file.txt content is removed , staged file .txt is preserved**
+      - git checkout HEAD -- file.txt // **unstaged file.txt + staged is preserved **
+      - git reset HEAD . // staged change are deleted + unstagged kept same
+  ```
+
 ### Push
 
 - 1. To Push we need to set the upstream
@@ -178,8 +199,7 @@
   ```
 - options rebase( Scenario : Two developers one pushed the changes to remote repo
   other is behind the remote and has not pushed his commits to remote so now need to fetch them and add his commits on top of new commits )
-  `        git pull --rebase
-   ` - same as
+  `      git pull --rebase` - same as
 - ```
       git fetch
       git rebase <remote-alias>/<branch>
