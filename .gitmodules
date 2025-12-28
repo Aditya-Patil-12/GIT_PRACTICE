@@ -1,0 +1,3 @@
+[submodule "GIT_SubModule_Practice"]
+	path = GIT_SubModule_Practice
+	url = https://github.com/Aditya-Patil-12/GIT_SubModule_Practice.git
