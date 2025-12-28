@@ -245,3 +245,33 @@
     cd path_to_sudirectory
     git pull
   ```
+- 3. Check Status
+
+  ```
+    git submodule status --recursive
+  ```
+
+  - --remote → fetches latest commits from each submodule’s remote tracking branch
+  - --merge → merges changes instead of detached HEAD
+  - --recursive → updates nested submodules too
+
+- 4. Pulling/Status/Fetch/ ..etc All Modules
+  ```
+  git submodule foreach <command>
+    git submodule foreach git pull
+  ```
+- 5. Update submodule
+  ```
+    git submodule update --remote --merge --recursive
+    git submodule update --recursive --rebase
+  ```
+- 6. Cloning which contains submodules
+
+  - Cloning a repo contains submodule , does not clone submodule
+  - ```
+    git submodule update --init  --recursive
+    ```
+
+  ```
+
+  ```
