@@ -233,3 +233,15 @@
   ```
       git status
   ```
+
+### Submodule
+
+- 1. Add a submodule
+  ```
+    git submodule add <link>
+  ```
+- 2. Pull new changes from sudirectory
+  ```
+    cd path_to_sudirectory
+    git pull
+  ```
